@@ -14,11 +14,11 @@ public class MyGenerator {
     private static final String password = "123456";
 
     // 模块为空字符串""或"/模块名" 子工程 subproject
-    private static final String subproject = "/mybatisplus_01";
+    private static final String subproject = "/mybatisplus_02";
     private static final String parent = "com.yzm";
-    private static final String moduleName = "plus01";
+    private static final String moduleName = "plus02";
     //需要生成实体类等基础信息的表名，多个用逗号隔开
-    private static final String[] tables = {"user", "account"};
+    private static final String[] tables = {"goods"};
 
     public static void main(String[] args) {
         FastAutoGenerator.create(url, username, password)
