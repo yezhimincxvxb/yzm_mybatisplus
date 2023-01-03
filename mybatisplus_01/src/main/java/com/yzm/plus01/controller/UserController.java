@@ -36,6 +36,15 @@ public class UserController {
         return userService.page(new Page<>(0, 2));
     }
 
+    /**
+     * 下拉分页，只执行一次sql，不返回总记录数、总页数
+     * @return
+     */
+    @GetMapping("/page2")
+    public IPage<User> page2() {
+        return userService.page(new Page<>(1, 2, false));
+    }
+
     @GetMapping("/pageUser")
     public IPage<UserVo> pageUser() {
         return userService.pageUser(new Page<>(1, 2), false);
